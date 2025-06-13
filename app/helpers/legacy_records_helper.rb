@@ -1,0 +1,2 @@
+module LegacyRecordsHelper
+end

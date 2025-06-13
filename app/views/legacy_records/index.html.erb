@@ -1,0 +1,13 @@
+<h1>Legacy Records</h1>
+<%= link_to "New Record", new_legacy_record_path %>
+<ul>
+  <% @legacy_records.each do |record| %>
+    <li>
+      <%= link_to record.name, legacy_record_path(record) %>
+      |
+      <%= link_to "Edit", edit_legacy_record_path(record) %>
+      |
+      <%= link_to "Delete", legacy_record_path(record), method: :delete, data: { confirm: "Are you sure?" } %>
+    </li>
+  <% end %>
+</ul>
